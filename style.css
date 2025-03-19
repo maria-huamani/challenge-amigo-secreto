@@ -1,11 +1,11 @@
 :root {
-    --color-primary: #0f0f0f;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
+    --color-primary: #3f2f27;
+    --color-secondary: #ceb872;
+    --color-tertiary: #ece6ab;
+    --color-button: #883f9e;
+    --color-button-hover: #b14ff3;
     --color-text: #444444;
-    --color-white: #FFFFFF;
+    --color-white: #920f51;
 }
 
 /* Estilos generales */
@@ -26,17 +26,29 @@ body {
 .main-content {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 70%;
+    align-items:center;
 }
+
+
 
 /* Banner */
 .header-banner {
-    flex: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0 0;
+    background-color: #fabae1; /* Color de fondo del contenedor */
+    border: 2px solid #000; /* Borde del cuadrado */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Usar flexbox para alinear el contenido */
+    flex-direction: column; /* Centrar horizontalmente el contenido */
+    align-items: center; /* Alinear los elementos en la parte superior */
+    width: 100%; /* Ancho completo del contenedor */
+}
+
+.title-image-container{
+    display:flex;
+    flex-direction: center;
+    align-items:center;
 }
 
 /* Sección de entrada */
@@ -44,21 +56,26 @@ body {
     flex: 60%;
     background-color: var(--color-secondary);
     border: 1px solid #000;
-    border-radius: 80px 80px 0 0;
+    border-radius: 64px 64px 64px 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 100%;
+    width: 40%;
 }
+
+
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
+    font-size: 48px; /* Tamaño del título */
+    font-family: "Merriweather", serif; /* Tipo de letra */
+    font-weight: 900; /* Grosor de la fuente */
+    font-style: italic; /* Estilo en cursiva */
+    color: var(--color-white); /* Color del texto */
+    margin: 0; /* Eliminar márgenes */
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .section-title {
@@ -66,8 +83,44 @@ body {
     font-size: 36px;
     font-weight: 700;
     color: var(--color-primary);
-    margin: 10px 0;
+    margin: 20px 0;
     text-align: center;
+    
+   
+}
+
+
+
+.description {
+    font-family: "Inter", sans-serif; /* Tipo de letra */
+    font-size: 18px; /* Tamaño de la fuente */
+    color: var(--color-white); /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    margin-top:20px;
+    text-transform: uppercase;
+}
+
+.parrafo{ 
+    font-family: "Inter", sans-serif; /* Tipo de letra */
+    font-size: 14px; /* Tamaño de la fuente */
+    color: black; /* Color del texto */
+    text-align: justify; /* Centrar el texto */
+    margin-top:15px;
+}
+.parrafo-pequeño{
+    font-family: "Inter", sans-serif; /* Tipo de letra */
+    font-size: 14px; /* Tamaño de la fuente */
+    color: black; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    margin-top:10px;
+}
+
+.parrafo-subpequeño{
+    font-family: "Inter", sans-serif; /* Tipo de letra */
+    font-size: 14px; /* Tamaño de la fuente */
+    color: black; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    margin-top:10px;
 }
 
 /* Contenedores de entrada y botón */
@@ -97,7 +150,7 @@ body {
     flex: 1;
     padding: 10px 15px;
     font-size: 16px;
-    border: 2px solid #333;
+    border: 2px solid #f87979;
     border-right: none;
     border-radius: 25px 0 0 25px;
     font-family: "Merriweather", serif;
@@ -122,7 +175,21 @@ button {
 }
 
 .button-add:hover {
-    background-color: #eca5a5;
+    background-color: #eebe3b;
+}
+
+.button-reset {
+    background-color: #883f9e; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    border: 2px solid #000; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    margin-left: 10px; /* Espacio a la izquierda */
+    border-radius: 25px; /* Bordes redondeados */
+}
+
+.button-reset:hover {
+    background-color: #d32f2f; /* Color de fondo al pasar el mouse */
 }
 
 /* Listas */
@@ -148,7 +215,7 @@ ul {
     align-items: center;
     width: 100%;
     padding: 10px 40px;
-    color: var(--color-white);
+    color: #f3fdf3;
     background-color: var(--color-button);
     font-size: 16px;
 }
@@ -157,6 +224,11 @@ ul {
     margin-right: 40px;
 }
 
+.header-image {
+    max-width: 100px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 10px; /* Espacio entre el título y la imagen */
+}
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
