@@ -11,17 +11,26 @@
 </head>
 
 <body>
-    <main class="main-content">
-        <header class="header-banner">
+    <header class="header-banner">
+        <div class="title-image-container">
             <h1 class="main-title">Amigo Secreto</h1>
-            <img src="assets/amigo-secreto.png" alt="Imagen representativa de amigo secreto">
+            <img src="assets/amigo.png" alt="Imagen representativa de amigo secreto" class="header-image">
+        </div>
+        <p class="description">¡Bienvenido al juego del Amigo Secreto! Aquí podrás agregar los nombres de tus amigos y sortear quién le toca regalar a quién.</p>
+        <p class="parrafo">El juego del Amigo Secreto, es una aplicación online y gratuita para hacer sorteos aleatorios de una forma fácil y divertida. 
+            Utilizala para elegir participantes, y saber quien será el próximo de tus amig@s en lavar los platos.</p>
+        <p class="parrafo-pequeño">Para jugar solo tienes que hacer click en "Sortear Amigo".</p>
+        <p class="parrafo-subpequeño"> Antes de comenzar, te recomendamos que ingreses los nombres de tus amig@s, y que solo aceptara nombres y no números de participantes.
+            2. Cada opción que salga ganadora, se eliminará luego de haber sido seleccionada.
+            3. Si gustas eliminar los nombres no deseados de la lista, solo da click sobre la "x".
+            4. Al terminar de hacer el sorteo o si gustas comenzar de nuevo el juego, da click en el botón "Reiniciar Juego"</p>
         </header>
         
         <section class="input-section">
             <h2 class="section-title">Digite el nombre de sus amigos</h2>
             <div class="input-wrapper">
-                <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre" oninput="verificarEntradaDeAmigo()">
-                <button class="button-add" onclick="agregarAmigo()" id="agregar" disabled>Añadir</button>
+                <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
+                <button class="button-add" onclick="agregarAmigo()">Añadir</button>
             </div>
            
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
@@ -31,6 +40,9 @@
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Sortear amigo
+                </button>
+                <button class="button-reset" onclick="reiniciarJuego()" aria-label="Reiniciar juego">
+                    Reiniciar juego
                 </button>
             </div>
         </section>
